@@ -11,7 +11,7 @@ provider "github" {
   owner = "evolutics"
 }
 
-resource "github_repository" "repository" {
+module "repository" {
   for_each = {
     buffet = {
       description = "Assembles many Dockerfiles in one"
@@ -122,16 +122,9 @@ resource "github_repository" "repository" {
     }
   }
 
+  source = "./repository"
+
   name        = each.key
   description = lookup(each.value, "description", null)
-  topics      = lookup(each.value, "topics", null)
-
-  allow_merge_commit     = false
-  allow_rebase_merge     = false
-  delete_branch_on_merge = true
-  has_issues             = true
-
-  lifecycle {
-    prevent_destroy = true
-  }
+  topics      = lookup(each.value, "topics", [])
 }
