@@ -69,15 +69,7 @@ resource "github_repository" "repository" {
 
     "my-github-as-code" = {}
 
-    "presentation-starter" = {
-      description = "Starter template for presentations with reveal.js"
-      topics = [
-        "presentation",
-        "reveal-js",
-        "starter",
-        "template"
-      ]
-    }
+    "presentation-starter" = {}
 
     "programming-conventions" = {}
 
