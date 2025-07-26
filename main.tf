@@ -13,7 +13,7 @@ provider "github" {
 
 resource "github_repository" "repository" {
   for_each = {
-    "buffet" = {
+    buffet = {
       description = "Assembles many Dockerfiles in one"
       topics = [
         "development",
@@ -22,7 +22,7 @@ resource "github_repository" "repository" {
       ]
     }
 
-    "code-cleaner-buffet" = {
+    code-cleaner-buffet = {
       description = "Code formatters and linters in custom Docker images"
       topics = [
         "clean-code",
@@ -32,19 +32,19 @@ resource "github_repository" "repository" {
       ]
     }
 
-    "comkube" = {
+    comkube = {
       description = "Deploy Docker Compose apps on Kubernetes"
     }
 
-    "continuous-model-app" = {}
+    continuous-model-app = {}
 
-    "ephemeral-desktop" = {}
+    ephemeral-desktop = {}
 
-    "haskell-formatter" = {
+    haskell-formatter = {
       description = "Haskell source code formatter"
     }
 
-    "iftree" = {
+    iftree = {
       description = "Include many files in your Rust code for self-contained binaries"
       topics = [
         "directory",
@@ -55,7 +55,7 @@ resource "github_repository" "repository" {
       ]
     }
 
-    "kerek" = {
+    kerek = {
       description = "Light continuous delivery for Docker Compose"
       topics = [
         "compose",
@@ -67,15 +67,15 @@ resource "github_repository" "repository" {
       ]
     }
 
-    "my-github-as-code" = {}
+    my-github-as-code = {}
 
-    "presentation-starter" = {}
+    presentation-starter = {}
 
-    "programming-conventions" = {}
+    programming-conventions = {}
 
-    "sparse-approximation" = {}
+    sparse-approximation = {}
 
-    "travel-kit" = {
+    travel-kit = {
       description = "Common code formatters and linters in a single Nix flake"
       topics = [
         "clean-code",
@@ -85,11 +85,11 @@ resource "github_repository" "repository" {
       ]
     }
 
-    "workstation" = {}
+    workstation = {}
 
-    "x-as-code-where-x-equals" = {}
+    x-as-code-where-x-equals = {}
 
-    "yaml-template-horror-no-more-cleaner-helm-charts-with-an-object-first-method" = {
+    yaml-template-horror-no-more-cleaner-helm-charts-with-an-object-first-method = {
       description = "YAML template horror no more: cleaner Helm charts with an object-first method"
       topics = [
         "go-template",
@@ -100,7 +100,7 @@ resource "github_repository" "repository" {
       ]
     }
 
-    "zero-downtime-deployments-with-podman-docker-or-docker-compose" = {
+    zero-downtime-deployments-with-podman-docker-or-docker-compose = {
       description = "Zero-downtime deployments with Podman, Docker, or Docker Compose"
     }
   }
