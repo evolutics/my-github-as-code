@@ -15,10 +15,21 @@ resource "github_repository" "repository" {
   for_each = {
     "buffet" = {
       description = "Assembles many Dockerfiles in one"
+      topics = [
+        "development",
+        "docker",
+        "dockerfile"
+      ]
     }
 
     "code-cleaner-buffet" = {
       description = "Code formatters and linters in custom Docker images"
+      topics = [
+        "clean-code",
+        "docker",
+        "formatter",
+        "linter"
+      ]
     }
 
     "comkube" = {
@@ -35,16 +46,37 @@ resource "github_repository" "repository" {
 
     "iftree" = {
       description = "Include many files in your Rust code for self-contained binaries"
+      topics = [
+        "directory",
+        "embed",
+        "file",
+        "folder",
+        "include"
+      ]
     }
 
     "kerek" = {
       description = "Light continuous delivery for Docker Compose"
+      topics = [
+        "compose",
+        "continuous-delivery",
+        "deployment",
+        "docker-compose",
+        "docker",
+        "podman"
+      ]
     }
 
     "my-github-as-code" = {}
 
     "presentation-starter" = {
       description = "Starter template for presentations with reveal.js"
+      topics = [
+        "presentation",
+        "reveal-js",
+        "starter",
+        "template"
+      ]
     }
 
     "programming-conventions" = {}
@@ -53,6 +85,12 @@ resource "github_repository" "repository" {
 
     "travel-kit" = {
       description = "Common code formatters and linters in a single Nix flake"
+      topics = [
+        "clean-code",
+        "formatter",
+        "linter",
+        "nix"
+      ]
     }
 
     "workstation" = {}
@@ -61,6 +99,13 @@ resource "github_repository" "repository" {
 
     "yaml-template-horror-no-more-cleaner-helm-charts-with-an-object-first-method" = {
       description = "YAML template horror no more: cleaner Helm charts with an object-first method"
+      topics = [
+        "go-template",
+        "helm-chart",
+        "kubernetes",
+        "templating",
+        "yaml"
+      ]
     }
 
     "zero-downtime-deployments-with-podman-docker-or-docker-compose" = {
@@ -70,6 +115,7 @@ resource "github_repository" "repository" {
 
   name        = each.key
   description = lookup(each.value, "description", null)
+  topics      = lookup(each.value, "topics", null)
 
   allow_merge_commit     = false
   allow_rebase_merge     = false
