@@ -34,6 +34,13 @@ resource "github_repository" "repository" {
 
     comkube = {
       description = "Deploy Docker Compose apps on Kubernetes"
+      topics = [
+        "compose",
+        "deployment",
+        "docker-compose",
+        "docker",
+        "kubernetes"
+      ]
     }
 
     continuous-model-app = {}
@@ -42,6 +49,10 @@ resource "github_repository" "repository" {
 
     haskell-formatter = {
       description = "Haskell source code formatter"
+      topics = [
+        "formatter",
+        "haskell"
+      ]
     }
 
     iftree = {
@@ -59,9 +70,8 @@ resource "github_repository" "repository" {
       description = "Light continuous delivery for Docker Compose"
       topics = [
         "compose",
-        "continuous-delivery",
+        "delivery",
         "deployment",
-        "docker-compose",
         "docker",
         "podman"
       ]
@@ -102,6 +112,13 @@ resource "github_repository" "repository" {
 
     zero-downtime-deployments-with-podman-docker-or-docker-compose = {
       description = "Zero-downtime deployments with Podman, Docker, or Docker Compose"
+      topics = [
+        "compose",
+        "deployment",
+        "docker",
+        "podman",
+        "zero-downtime"
+      ]
     }
   }
 
