@@ -75,4 +75,8 @@ resource "github_repository" "repository" {
   allow_rebase_merge     = false
   delete_branch_on_merge = true
   has_issues             = true
+
+  lifecycle {
+    prevent_destroy = true
+  }
 }
