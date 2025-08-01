@@ -99,8 +99,8 @@ module "repository" {
 
     x-as-code-where-x-equals = {}
 
-    yaml-template-horror-no-more-cleaner-helm-charts-with-an-object-first-method = {
-      description = "YAML template horror no more: cleaner Helm charts with an object-first method"
+    yaml-template-horror-no-more-cleaner-helm-charts = {
+      description = "YAML template horror no more: cleaner Helm charts with an object-first style"
       topics = [
         "go-template",
         "helm-chart",
